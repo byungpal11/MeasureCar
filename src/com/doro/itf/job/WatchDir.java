@@ -45,14 +45,11 @@ public class WatchDir extends Thread {
     public void watchdirectory() throws IOException {
 
         LocalDateTime currentdate = LocalDateTime.now();
-        // DateTimeFormatter formatter_year = DateTimeFormatter.ofPattern("yyyy");
         DateTimeFormatter formatter_month = DateTimeFormatter.ofPattern("MM");
-        // DateTimeFormatter formatter_day = DateTimeFormatter.ofPattern("dd");
+
         String year = Integer.toString(currentdate.getYear());
         String month = currentdate.format(formatter_month);
         String day = Integer.toString(currentdate.getDayOfMonth());
-
-        // System.out.println(year + month + day);
 
         String basePath = property.ReadConfig("ILSDPATH");
         String dirpath = "";

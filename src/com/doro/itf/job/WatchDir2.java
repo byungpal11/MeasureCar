@@ -27,7 +27,6 @@ public class WatchDir2 extends Thread{
         log = LogMgr.getInstance();
         dbservice = new Dbservice();
         fileutil =new FileUtil();
-
     }
 
     public boolean isRunnable() {
@@ -47,14 +46,10 @@ public class WatchDir2 extends Thread{
 
         LocalDateTime currentdate = LocalDateTime.now();
         LocalDateTime yesterday = currentdate.minusDays(1);
-        // DateTimeFormatter formatter_year = DateTimeFormatter.ofPattern("yyyy");
         DateTimeFormatter formatter_month = DateTimeFormatter.ofPattern("MM");
-        // DateTimeFormatter formatter_day = DateTimeFormatter.ofPattern("dd");
         String year = Integer.toString(yesterday.getYear());
         String month = yesterday.format(formatter_month);
         String day = Integer.toString(yesterday.getDayOfMonth());
-
-        //System.out.println(year + month + day);
 
         String basePath = property.ReadConfig("WIGTPATH");
         String dirpath = "";
@@ -103,7 +98,6 @@ public class WatchDir2 extends Thread{
                 int datalineCnt = 0;
                 while ((dataline = reader.readLine()) != null) {
                     if (datalineCnt != 0)
-                        // System.out.println(dataline);
                         wigtdataList.add(dataline);
                     datalineCnt++;
                 }
