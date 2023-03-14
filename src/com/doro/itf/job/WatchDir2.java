@@ -14,19 +14,19 @@ import com.doro.itf.file.FileUtil;
 import com.doro.itf.log.LogMgr;
 import com.doro.itf.properties.Property;
 
-public class WatchDir2 extends Thread{
+public class WatchDir2 extends Thread {
 
-    private boolean runnable=false;
+    private boolean runnable = false;
     private Property property = null;
     private LogMgr log = null;
-    private Dbservice dbservice =null;
-    private FileUtil fileutil =null;
+    private Dbservice dbservice = null;
+    private FileUtil fileutil = null;
 
     public WatchDir2() {
         property = new Property();
         log = LogMgr.getInstance();
         dbservice = new Dbservice();
-        fileutil =new FileUtil();
+        fileutil = new FileUtil();
     }
 
     public boolean isRunnable() {
@@ -104,10 +104,10 @@ public class WatchDir2 extends Thread{
                 reader.close();
 
                 if (dbservice.insertweight(wigtdataList)) {
-                    log.WriteLog(fList[i].getName().substring(3, 7) + ":DB Insert Success", false);
+                    log.WriteLog(fList[i].getName() + ":DB Insert Success", false);
                     fileutil.PassFileMove(filePath, dirpath, fileName);
                 } else {
-                    log.WriteLog(fList[i].getName().substring(3, 7) + ":DB Insert FAIL", false);
+                    log.WriteLog(fList[i].getName() + ":DB Insert FAIL", false);
                     fileutil.FailFileMove(filePath, dirpath, fileName);
                 }
                 wigtdataList.clear();
@@ -122,12 +122,10 @@ public class WatchDir2 extends Thread{
         while (runnable) {
             try {
                 Thread.sleep(1000);
+                watchdirectory();
             } catch (InterruptedException e) {
 
                 e.printStackTrace();
-            }
-            try {
-                watchdirectory();
             } catch (IOException e) {
 
                 e.printStackTrace();
@@ -137,5 +135,4 @@ public class WatchDir2 extends Thread{
 
     }
 
-    
 }

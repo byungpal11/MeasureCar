@@ -13,7 +13,7 @@ import com.doro.itf.properties.Property;
 
 public class WatchDir extends Thread {
 
-    private boolean runnable=false;
+    private boolean runnable = false;
     private Property property = null;
     private Badloaddata badloaddata = null;
     private LogMgr log = null;
@@ -93,16 +93,28 @@ public class WatchDir extends Thread {
             if (!fileName.startsWith("X") && !fileName.startsWith("x")) {
                 if (fileName.contains("C")) {
                     badloaddata.DataRead(filePath, fileName);
-                    if (dbservice.insertbnds())
+                    if (dbservice.insertbnds()) {
                         fileutil.PassFileMove(filePath, dirpath, fileName);
-                    else
+                        log.WriteLog(fileName + ":insert SUCCESS", false);
+
+                    } else {
                         fileutil.FailFileMove(filePath, dirpath, fileName);
+                        log.WriteLog(fileName + ":insert Fail", false);
+
+                    }
+
                 } else {
                     badloaddata.DataRead(filePath, fileName);
-                    if (dbservice.updatebnds())
+                    if (dbservice.updatebnds()) {
                         fileutil.PassFileMove(filePath, dirpath, fileName);
-                    else
+                        log.WriteLog(fileName + ":update SUCCESS", false);
+
+                    } else {
                         fileutil.FailFileMove(filePath, dirpath, fileName);
+                        log.WriteLog(fileName + ":update Fail", false);
+
+                    }
+
                 }
 
             }
@@ -117,12 +129,10 @@ public class WatchDir extends Thread {
         while (runnable) {
             try {
                 Thread.sleep(1000);
+                watchdirectory();
             } catch (InterruptedException e) {
 
                 e.printStackTrace();
-            }
-            try {
-                watchdirectory();
             } catch (IOException e) {
 
                 e.printStackTrace();
