@@ -1,0 +1,100 @@
+[2023-03-14-11:35:14]:Start MeasureProcess ...
+[2023-03-14-11:35:14]:Not Alive!! Watchdir start!!
+[2023-03-14-11:36:13]:Start MeasureProcess ...
+[2023-03-14-11:36:13]:Not Alive!! Watchdir start!!
+[2023-03-14-16:26:35]:Start MeasureProcess ...
+[2023-03-14-16:26:35]:Not Alive!! Watchdir start!!
+[2023-03-14-16:27:04]:Start MeasureProcess ...
+[2023-03-14-16:27:04]:Not Alive!! Watchdir start!!
+[2023-03-14-16:27:05]:DB disconnetcion Success
+[2023-03-14-16:28:21]:Start MeasureProcess ...
+[2023-03-14-16:28:21]:Not Alive!! Watchdir start!!
+[2023-03-14-16:28:22]:DB connction success
+[2023-03-14-16:28:22]:DB disconnetcion Success
+[2023-03-14-21:09:03]:Start MeasureProcess ...
+[2023-03-14-21:09:03]:Not Alive!! Watchdir start!!
+[2023-03-14-21:09:05]:Insert SUCCESS
+[2023-03-14-21:09:05]:DB disconnetcion Success
+[2023-03-14-21:12:30]:Start MeasureProcess ...
+[2023-03-14-21:12:31]:Not Alive!! Watchdir start!!
+[2023-03-14-21:13:03]:Start MeasureProcess ...
+[2023-03-14-21:13:03]:Not Alive!! Watchdir start!!
+[2023-03-14-21:14:26]:Start MeasureProcess ...
+[2023-03-14-21:14:26]:Not Alive!! Watchdir start!!
+[2023-03-14-21:14:28]:Insert SUCCESS
+[2023-03-14-21:14:28]:DB disconnetcion Success
+[2023-03-14-21:41:04]:Start MeasureProcess ...
+[2023-03-14-21:41:04]:Not Alive!! Watchdir1 start!!
+[2023-03-14-21:47:29]:Start MeasureProcess ...
+[2023-03-14-21:47:29]:Not Alive!! Watchdir1 start!!
+[2023-03-14-21:47:31]:DB disconnetcion Success
+[2023-03-14-21:49:29]:Start MeasureProcess ...
+[2023-03-14-21:49:29]:Not Alive!! Watchdir1 start!!
+[2023-03-14-21:55:20]:Start MeasureProcess ...
+[2023-03-14-21:55:20]:Not Alive!! Watchdir1 start!!
+[2023-03-14-22:00:59]:Start MeasureProcess ...
+[2023-03-14-22:01:00]:Not Alive!! Watchdir1 start!!
+[2023-03-14-22:01:01]:java.sql.BatchUpdateException: ORA-00942: 테이블 또는 뷰가 존재하지 않습니다
+
+[2023-03-14-22:01:01]:DB disconnetcion Success
+[2023-03-14-22:01:01]:0772DB Insert FAIL
+[2023-03-14-22:01:02]:java.sql.BatchUpdateException: ORA-00942: 테이블 또는 뷰가 존재하지 않습니다
+
+[2023-03-14-22:01:02]:DB disconnetcion Success
+[2023-03-14-22:01:02]:0772DB Insert FAIL
+[2023-03-14-22:01:03]:java.sql.BatchUpdateException: ORA-00942: 테이블 또는 뷰가 존재하지 않습니다
+
+[2023-03-14-22:01:03]:DB disconnetcion Success
+[2023-03-14-22:01:03]:0772DB Insert FAIL
+[2023-03-14-22:01:04]:java.sql.BatchUpdateException: ORA-00942: 테이블 또는 뷰가 존재하지 않습니다
+
+[2023-03-14-22:01:04]:DB disconnetcion Success
+[2023-03-14-22:01:04]:0772DB Insert FAIL
+[2023-03-14-22:06:37]:Start MeasureProcess ...
+[2023-03-14-22:06:38]:Not Alive!! Watchdir1 start!!
+[2023-03-14-22:06:40]:DB disconnetcion Success
+[2023-03-14-22:06:40]:0772DB Insert Success
+[2023-03-14-22:06:41]:java.sql.BatchUpdateException: ORA-00001: 무결성 제약 조건(JANG.T_ITAC_LDNG_WIGT_MSRMT01D1_PK)에 위배됩니다
+
+[2023-03-14-22:06:41]:DB disconnetcion Success
+[2023-03-14-22:06:41]:0772DB Insert FAIL
+[2023-03-14-22:06:42]:java.sql.BatchUpdateException: ORA-00001: 무결성 제약 조건(JANG.T_ITAC_LDNG_WIGT_MSRMT01D1_PK)에 위배됩니다
+
+[2023-03-14-22:06:42]:DB disconnetcion Success
+[2023-03-14-22:06:42]:0772DB Insert FAIL
+[2023-03-14-22:06:43]:java.sql.BatchUpdateException: ORA-00001: 무결성 제약 조건(JANG.T_ITAC_LDNG_WIGT_MSRMT01D1_PK)에 위배됩니다
+
+[2023-03-14-22:06:43]:DB disconnetcion Success
+[2023-03-14-22:06:43]:0772DB Insert FAIL
+[2023-03-14-22:06:44]:java.sql.BatchUpdateException: ORA-00001: 무결성 제약 조건(JANG.T_ITAC_LDNG_WIGT_MSRMT01D1_PK)에 위배됩니다
+
+[2023-03-14-22:06:44]:DB disconnetcion Success
+[2023-03-14-22:06:44]:0772DB Insert FAIL
+[2023-03-14-22:06:45]:java.sql.BatchUpdateException: ORA-00001: 무결성 제약 조건(JANG.T_ITAC_LDNG_WIGT_MSRMT01D1_PK)에 위배됩니다
+
+[2023-03-14-22:06:45]:DB disconnetcion Success
+[2023-03-14-22:06:45]:0772DB Insert FAIL
+[2023-03-14-22:06:46]:java.sql.BatchUpdateException: ORA-00001: 무결성 제약 조건(JANG.T_ITAC_LDNG_WIGT_MSRMT01D1_PK)에 위배됩니다
+
+[2023-03-14-22:06:46]:DB disconnetcion Success
+[2023-03-14-22:06:46]:0772DB Insert FAIL
+[2023-03-14-22:08:15]:Start MeasureProcess ...
+[2023-03-14-22:08:15]:Not Alive!! Watchdir1 start!!
+[2023-03-14-22:08:26]:DB disconnetcion Success
+[2023-03-14-22:08:26]:0772DB Insert Success
+[2023-03-14-22:15:36]:Start MeasureProcess ...
+[2023-03-14-22:15:36]:Not Alive!! Watchdir start!!
+[2023-03-14-22:15:36]:Not Alive!! Watchdir1 start!!
+[2023-03-14-22:15:36]:Not Alive!! Watchdir2 start!!
+[2023-03-14-22:16:05]:Start MeasureProcess ...
+[2023-03-14-22:16:05]:Not Alive!! Watchdir start!!
+[2023-03-14-22:16:05]:Not Alive!! Watchdir1 start!!
+[2023-03-14-22:16:05]:Not Alive!! Watchdir2 start!!
+[2023-03-14-22:19:00]:Start MeasureProcess ...
+[2023-03-14-22:19:00]:Not Alive!! Watchdir start!!
+[2023-03-14-22:19:00]:Not Alive!! Watchdir1 start!!
+[2023-03-14-22:19:00]:Not Alive!! Watchdir2 start!!
+[2023-03-14-22:20:46]:Start MeasureProcess ...
+[2023-03-14-22:20:47]:Not Alive!! Watchdir start!!
+[2023-03-14-22:20:47]:Not Alive!! Watchdir1 start!!
+[2023-03-14-22:20:47]:Not Alive!! Watchdir2 start!!
