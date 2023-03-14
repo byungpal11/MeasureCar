@@ -16,7 +16,7 @@ import com.doro.itf.properties.Property;
 
 public class WatchDir2 extends Thread{
 
-    private boolean runnable;
+    private boolean runnable=false;
     private Property property = null;
     private LogMgr log = null;
     private Dbservice dbservice =null;

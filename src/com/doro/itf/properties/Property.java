@@ -6,8 +6,7 @@ import java.util.Properties;
 
 public class Property {
 
-	
-	
+
 	public Property() {
 
 	}

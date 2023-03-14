@@ -13,7 +13,7 @@ import com.doro.itf.properties.Property;
 
 public class WatchDir extends Thread {
 
-    private boolean runnable;
+    private boolean runnable=false;
     private Property property = null;
     private Badloaddata badloaddata = null;
     private LogMgr log = null;
