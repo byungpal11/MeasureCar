@@ -3,8 +3,10 @@ package com.doro.itf.log;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import java.text.SimpleDateFormat;
+// import java.time.LocalDateTime;
+// import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 //LOG
 public class LogMgr {
@@ -58,21 +60,27 @@ public class LogMgr {
 	public static String LogPath() {
 		String strLogPath;
 
-		LocalDateTime now = LocalDateTime.now();
-		DateTimeFormatter currentdate_fomat = DateTimeFormatter.ofPattern("yyyyMMdd");
+		// LocalDateTime currenttime = LocalDateTime.now();
+		// DateTimeFormatter currentdate_fomat = DateTimeFormatter.ofPattern("yyyyMMdd");
 
-		strLogPath = "./log/" + now.format(currentdate_fomat) + "MeasureCar.log";
+		Date currenttime =new Date(System.currentTimeMillis());
+		SimpleDateFormat format_current =new SimpleDateFormat("yyyyMMdd");
+
+		strLogPath = "./log/" + format_current.format(currenttime)+ "MeasureCar.log";
 
 		return strLogPath;
 
 	}
 
+
 	public static String LogDescription() {
 		String str;
-		LocalDateTime now = LocalDateTime.now();
-		DateTimeFormatter currentdate_fomat = DateTimeFormatter.ofPattern("yyyy-MM-dd-HH:mm:ss");
+		// LocalDateTime currenttime = LocalDateTime.now();
+		// DateTimeFormatter currentdate_fomat = DateTimeFormatter.ofPattern("yyyy-MM-dd-HH:mm:ss");
+		Date currenttime =new Date(System.currentTimeMillis());
+		SimpleDateFormat format_current =new SimpleDateFormat("yyyy-MM-dd-HH:mm:ss");
 
-		str = "[" + now.format(currentdate_fomat) + "]:";
+		str = "[" + format_current.format(currenttime) + "]:";
 
 		return str;
 	}

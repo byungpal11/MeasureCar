@@ -4,9 +4,12 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+
+import java.text.SimpleDateFormat;
+// import java.time.LocalDateTime;
+// import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import com.doro.itf.db.Dbservice;
@@ -44,12 +47,23 @@ public class WatchDir2 extends Thread {
 
     public void watchdirectory() throws IOException {
 
-        LocalDateTime currentdate = LocalDateTime.now();
-        LocalDateTime yesterday = currentdate.minusDays(1);
-        DateTimeFormatter formatter_month = DateTimeFormatter.ofPattern("MM");
-        String year = Integer.toString(yesterday.getYear());
-        String month = yesterday.format(formatter_month);
-        String day = Integer.toString(yesterday.getDayOfMonth());
+        // LocalDateTime currentdate = LocalDateTime.now();
+        // LocalDateTime yesterday = currentdate.minusDays(1);
+        // DateTimeFormatter formatter_month = DateTimeFormatter.ofPattern("MM");
+        // String year = Integer.toString(yesterday.getYear());
+        // String month = yesterday.format(formatter_month);
+        // String day = Integer.toString(yesterday.getDayOfMonth());
+
+        
+        Date currenttime = new Date();
+        Date yesterday= new Date(currenttime.getTime() + (1000 * 60 * 60 * 24 * -1));
+        SimpleDateFormat format_YYYY = new SimpleDateFormat("yyyy");
+        SimpleDateFormat format_MM= new SimpleDateFormat("MM");
+        SimpleDateFormat format_DD = new SimpleDateFormat("dd");
+
+        String year = format_YYYY.format(yesterday);
+        String month =  format_MM.format(yesterday);
+        String day =  format_DD.format(yesterday);
 
         String basePath = property.ReadConfig("WIGTPATH");
         String dirpath = "";

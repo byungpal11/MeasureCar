@@ -2,8 +2,10 @@ package com.doro.itf.job;
 
 import java.io.File;
 import java.io.IOException;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import java.text.SimpleDateFormat;
+// import java.time.LocalDateTime;
+// import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 import com.doro.itf.data.Badloaddata;
 import com.doro.itf.db.Dbservice;
@@ -44,12 +46,21 @@ public class WatchDir extends Thread {
 
     public void watchdirectory() throws IOException {
 
-        LocalDateTime currentdate = LocalDateTime.now();
-        DateTimeFormatter formatter_month = DateTimeFormatter.ofPattern("MM");
+        Date currentdate =new Date(System.currentTimeMillis());
+        SimpleDateFormat format_YYYY = new SimpleDateFormat("yyyy");
+        SimpleDateFormat format_MM= new SimpleDateFormat("MM");
+        SimpleDateFormat format_DD = new SimpleDateFormat("dd");
 
-        String year = Integer.toString(currentdate.getYear());
-        String month = currentdate.format(formatter_month);
-        String day = Integer.toString(currentdate.getDayOfMonth());
+        String year = format_YYYY.format(currentdate);
+        String month =  format_MM.format(currentdate);
+        String day =  format_DD.format(currentdate);
+        
+        // LocalDateTime currentdate = LocalDateTime.now();
+        // DateTimeFormatter formatter_month = DateTimeFormatter.ofPattern("MM");
+
+        // String year = Integer.toString(currentdate.getYear());
+        // String month = currentdate.format(formatter_month);
+        // String day = Integer.toString(currentdate.getDayOfMonth());
 
         String basePath = property.ReadConfig("ILSDPATH");
         String dirpath = "";
