@@ -38,6 +38,8 @@ public class WatchDog extends Thread {
 					watchdir = new WatchDir();
 				}
 				if (!watchdir.isAlive() || !watchdir.isRunnable()) {
+					watchdir = null;
+					watchdir = new WatchDir();
 					watchdir.doStart();
 					log.WriteLog("Not Alive!! Watchdir start!!", true);
 				} 
@@ -46,6 +48,8 @@ public class WatchDog extends Thread {
 					watchdir1 = new WatchDir1();
 				}
 				if (!watchdir1.isAlive() || !watchdir1.isRunnable()) {
+					watchdir1 = null;
+					watchdir1 = new WatchDir1();
 					watchdir1.doStart();
 					log.WriteLog("Not Alive!! Watchdir1 start!!", true);
 				} 
@@ -54,6 +58,8 @@ public class WatchDog extends Thread {
 					watchdir2 = new WatchDir2();
 				}
 				if (!watchdir2.isAlive() || !watchdir2.isRunnable()) {
+					watchdir2 = null;
+					watchdir2 = new WatchDir2();
 					watchdir2.doStart();
 					log.WriteLog("Not Alive!! Watchdir2 start!!", true);
 				} 
