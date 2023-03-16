@@ -1,0 +1,1 @@
+ps -ef | grep MeasureCar | grep -Ev 'grep|ps|awk|tail|vi|sh' | kill -9  awk '{print "kill " $2}' 
